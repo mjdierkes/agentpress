@@ -43,14 +43,14 @@ class TerminalTool(Tool):
         }
     })
     @xml_schema(
-        tag_name="execute-command",
+        tag_name="execute_command",
         mappings=[
             {"param_name": "command", "node_type": "content", "path": "."}
         ],
         example='''
-        <execute-command>
+        <execute_command>
         npm install package-name
-        </execute-command>
+        </execute_command>
         '''
     )
     async def execute_command(self, command: str) -> ToolResult:
